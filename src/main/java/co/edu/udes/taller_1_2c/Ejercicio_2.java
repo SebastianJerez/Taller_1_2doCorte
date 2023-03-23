@@ -121,9 +121,13 @@ public class Ejercicio_2 {
             }
         }
         
+        daysPassed=daysPassed+day;
+        if(month!=2&&daysPassed>=60&&year%4==0){
+            daysPassed++;
+        }
+        
         if(isValid){
             System.out.println("La fecha ingresada es valida");
-            daysPassed = daysPassed+day;
             System.out.println("Los dias que han transcurrido hasta ese dia son "+daysPassed+" dias");
         }else{
             System.out.println("La fecha ingresada es invalida");
